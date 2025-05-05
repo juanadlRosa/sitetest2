@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="gal1.css">
+</head>
+<body>
+    <div class="container">
+        <div class="imgcontainer">
+            <div class="image"><img src="slide/image1.jpg"></div>
+            <div class="image"><img src="slide/image2.jpg"></div>
+            <div class="image"><img src="slide/image3.jpg"></div>
+            <div class="image"><img src="slide/image4.jpg"></div>
+        </div>
+        <div class="popup">
+            <span>&times;</span>
+            <img src="slide/image1.jpg">
+        </div>
+    </div>
+    <script>
+        document.querySelectorAll('.imgcontainer img').forEach(image =>{
+            image.onclick = () =>{
+                document.querySelector('.popup').style.display = 'block';
+                document.querySelector('.popup img').src = image.getAttribute('src')
+            }
+        });
+    
+        document.querySelector('.popup span').onclick = () =>{
+            document.querySelector('.popup').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
+<!-- <div class="container">
+    <div class="imgcontainer">
+        <div class="image"><img src="slide/image1.jpg"></div>
+        <div class="image"><img src="slide/image2.jpg"></div>
+        <div class="image"><img src="slide/image3.jpg"></div>
+        <div class="image"><img src="slide/image4.jpg"></div>
+    </div>
+    <div class="popup">
+        <span>&times;</span>
+        <img src="slide/image1.jpg">
+    </div>
+</div>
+<script>
+    document.querySelectorAll('.imgcontainer img').forEach(image =>{
+        image.onclick = () =>{
+            document.querySelector('.popup').style.display = 'block';
+            document.querySelector('.popup img').src = image.getAttribute('src')
+        }
+    });
+
+    document.querySelector('.popup span').onclick = () =>{
+        document.querySelector('.popup').style.display = 'none';
+    }
+</script> -->
